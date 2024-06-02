@@ -13,11 +13,25 @@
 </head>
 
 <body style="margin : 0px; overflow: hidden;">
+      <script>
+    AFRAME.registerComponent('marker-cooler', {
+      init: function () {
+        const marker = this.el;
+        marker.addEventListener('markerFound', function () {
+          audio_cooler.play();
+        });
+      }
+    });
+    window.onload = () => {
+      audio_cooler = document.getElementById('audio_cooler');
+    };
+  </script>
+    
     <a-scene embedded arjs="debugUIEnabled:false;">
         <a-entity camera></a-entity>
        
         <a-assets>
-            <audio id="sound" src="audio/audio.mp3" preload="auto"></audio>
+             <audio id ="audio_cooler" src="audio/audio.mp3" preload="auto"></audio>
         </a-assets>
 
         
@@ -42,20 +56,6 @@
 
         </a-marker>
     </a-scene>
-
-    <script>
-AFRAME.registerComponent('soundhandler', {
-    tick: function () {
-           var entity = document.querySelector('[sound]');
-         if (document.querySelector('a-marker').object3D.visible == true) {
-            entity.components.sound.playSound();
-        } else {
-            entity.components.sound.pauseSound();
-        }
-
-     }
-});
-</script>
 </body>
 
 </html>
