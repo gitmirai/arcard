@@ -10,6 +10,7 @@
 
   <body style="margin : 0px; overflow: hidden;">
 
+  <p id="str">初めてのJavaScript勉強中だよ！</p>
   <script>
     AFRAME.registerComponent('marker-cooler', {
       init: function () {
@@ -22,6 +23,16 @@
     window.onload = () => {
       audio_cooler = document.getElementById('audio_cooler');
     };
+
+    navigator.geolocation.getCurrentPosition(success, error);
+
+　　function success(position) {
+  　　const latitude = position.coords.latitude;
+  　　const longitude = position.coords.longitude;
+  　　// 取得した位置情報を活用する処理
+      <p id="str">latitude + longitude</p>
+　　} 
+    
   </script>
 
     <!-- a-frame scene -->
@@ -57,7 +68,7 @@
             </a-image>
              -->
 　　　　
-        　　<a-text position="-1 1.25 -3" value="Hello, World!" color="black"></a-text>
+        　　<a-text position="-1 1.25 -3" value=str color="black"></a-text>
         
       </a-marker>
 
