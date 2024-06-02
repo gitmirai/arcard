@@ -2,9 +2,6 @@
 
 AR.js+A-Frameで雑にサクッとAR名刺を作るレポジトリ
 
-詳しい手順については[ブログ](https://murabitoleg.com/simple-ar-meishi/)を参照してください．
-
-[動画](https://www.youtube.com/embed/ZFQxX1sKyss)もあります．
 
 ## 作成手順
 
