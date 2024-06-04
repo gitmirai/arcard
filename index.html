@@ -50,6 +50,7 @@
         <audio id ="audio_cooler" src="audio/audio.mp3" preload="auto"></audio>
       </a-assets>
 
+      <!-- AR mark1 -->
       <a-marker marker-cooler type="pattern" url="img/pattern_simple_qrcode.patt">
       
             <!-- icon -->
@@ -77,7 +78,17 @@
            -->
       </a-marker>
 
+      <!-- AR mark2 -->
+      <!-- 自作マーカーを追加 ビワヒガイ -->
+      <a-marker preset="custom" type='pattern' url='assets/pattern-biwahigai.patt'>
+
+        <!-- イメージ表示  -->
+        <a-image width="2" height="2" position="0.2 0.4 0.4" rotation="-120 0 0" src="img/contacts.png">
+        </a-image>
+        </a-marker>
+
       <a-entity camera></a-entity>
+      
     </a-scene>
   </body>
 </html>
