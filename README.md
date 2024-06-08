@@ -1,6 +1,6 @@
 # Simple_AR_CARD 
 
-AR.js+A-Frameで雑にサクッとAR名刺を作るレポジトリ
+AR.js+A-FrameでAR名刺を作るレポジトリ
 
 
 ## 作成手順
